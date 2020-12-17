@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<meta name="description" content="Login - Register Template">
+		<meta name="author" content="Lorenzo Angelino aka MrLolok">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/datatables.min.css">
+		<link rel="stylesheet" href="../css/nav_bar2.css">
+
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<ul class="list-unstyled components">
+					<li>
+						<a href="home.htm">
+							<i class="fa fa-home fa-lg"></i>
+							<span class="nav-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="profile.html">
+							<i class="fa fa-user-circle fa-lg"></i>
+							<span class="nav-text">Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="login.html">
+							<i class="fa fa-user fa-lg"></i>
+							<span class="nav-text">Login</span>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<i class="fa fa-envelope-o fa-lg"></i>
+							<span class="nav-text">Contact</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="administration/cities/index.html">
+							<i class="fa fa-city fa-lg"></i>
+							<span class="nav-text">Cities</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div id="content">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" id="sidebarCollapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					
+					<div class="row mt-2 justify-content-center">
+						<div class="col-5 text-center">
+							<img id="img-profil" src="https://bioritmefestival.org/wp-content/uploads/2017/11/img-test.png">
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-6 col-sm-12 text-center">
+							<div class="card shadow mb-4">
+								<!-- Card Header - Dropdown -->
+								<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+									<h6 class="m-0 font-weight-bold">Mes informations</h6>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12 text-center">
+							<div class="card shadow mb-4">
+								<!-- Card Body -->
+								<div class="card-body">
+									<form>
+								</div>
+							</div>
+						</div>
+					</div>	
+			</div>
+		</div>   
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/1f16052b4b.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../js/datatables.min.js"></script>
+		
+		<!-- Menu Toggle Script -->
+		<script>
+			$(document).ready(function () {
+				$('#sidebarCollapse').on('click', function () {
+					$('#sidebar').toggleClass('active');
+				});	
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Create a country</title>
+		<meta name="description" content="Login - Register Template">
+		<meta name="author" content="Lorenzo Angelino aka MrLolok">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../../lib/noty/noty.css">
+		<link rel="stylesheet" href="../../../lib/noty/themes/metroui.css">
+		<link rel="stylesheet" href="../../../css/datatables.min.css">
+		<link rel="stylesheet" href="../../../css/nav_bar2.css">
+		
+		<link rel="stylesheet" href="../../../css/main.css">
+		<link rel="stylesheet" href="../../../css/login.css">
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<ul class="list-unstyled components">
+					<li>
+						<a href="../../home.html">
+							<i class="fa fa-home fa-lg"></i>
+							<span class="nav-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="../../profile.html">
+							<i class="fa fa-user-circle fa-lg"></i>
+							<span class="nav-text">Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="../../login.html">
+							<i class="fa fa-user fa-lg"></i>
+							<span class="nav-text">Login</span>
+						</a>
+					</li>
+					<li>
+						<a href="../../contact.html">
+							<i class="fa fa-envelope-o fa-lg"></i>
+							<span class="nav-text">Contact</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../cities/index.html">
+							<i class="fa fa-map-marked-alt"></i>
+							<span class="nav-text">Cities</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../countries/index.html">
+							<i class="fa fa-globe-europe"></i>
+							<span class="nav-text">Countries</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../contract_type/index.html">
+							<i class="fa fa-file-signature"></i>
+							<span class="nav-text">Contracts</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="index.html">
+							<i class="fa fa-users-cog"></i>
+							<span class="nav-text">Roles</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../advertisements/index.html">
+							<i class="fa fa-briefcase"></i>
+							<span class="nav-text">Advertisement</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- Content -->
+			<div id="content">
+				<div class="container-fluid h-100">
+					<button class="navbar-toggler float-left" type="button" id="sidebarCollapse">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<div class="row justify-content-center h-100">
+						<div class="col-lg-6 col-sm-12 align-self-center mx-auto login-card">
+							<form id="create-roles-form">
+								<div class="login-title mb-3 ">
+									<h3 class="text-center">Create a role</h3>
+								</div>
+								<div class="form-group">
+									<label for="title">Role:</label><br>
+									<input type="text" name="title" id="title" class="form-control" placeholder="user">
+								</div>
+								<div class="form-group text-right">
+									<button type="submit" id="submit" class="btn hover-color-white bg-orange btn-md">Create</button>
+								</div>
+							</form>
+						</div>
+					</div>			
+				</div>
+			</div>
+			<!-- fin content -->
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../../../lib/noty/noty.js"></script>
+		<script src="https://kit.fontawesome.com/1f16052b4b.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+		<script src="../../../js/site.js"></script>
+		<script src="../../../js/roles.js"></script>
+	</body>
+</html>

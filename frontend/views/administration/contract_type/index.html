@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Contracts types</title>
+		<meta name="description" content="Login - Register Template">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../../lib/noty/noty.css">
+		<link rel="stylesheet" href="../../../lib/noty/themes/metroui.css">
+		<link rel="stylesheet" href="../../../css/datatables.min.css">
+		<link rel="stylesheet" href="../../../css/nav_bar2.css">
+		
+		<link rel="stylesheet" href="../../../css/main.css">
+		<link rel="stylesheet" href="../../../css/login.css">
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<ul class="list-unstyled components">
+					<li>
+						<a href="../../home.html">
+							<i class="fa fa-home fa-lg"></i>
+							<span class="nav-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="../../profile.html">
+							<i class="fa fa-user-circle fa-lg"></i>
+							<span class="nav-text">Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="../../login.html">
+							<i class="fa fa-user fa-lg"></i>
+							<span class="nav-text">Login</span>
+						</a>
+					</li>
+					<li>
+						<a href="../../contact.html">
+							<i class="fa fa-envelope-o fa-lg"></i>
+							<span class="nav-text">Contact</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../cities/index.html">
+							<i class="fa fa-map-marked-alt"></i>
+							<span class="nav-text">Cities</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../countries/index.html">
+							<i class="fa fa-globe-europe"></i>
+							<span class="nav-text">Countries</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="index.html">
+							<i class="fa fa-file-signature"></i>
+							<span class="nav-text">Contracts</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../roles/index.html">
+							<i class="fa fa-users-cog"></i>
+							<span class="nav-text">Roles</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="../advertisements/index.html">
+							<i class="fa fa-briefcase"></i>
+							<span class="nav-text">Advertisement</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Content -->
+			<div id="content">
+				<div class="container-fluid h-100">
+					<button class="navbar-toggler float-left" type="button" id="sidebarCollapse">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					
+					<div id="home-recherche" class="row pb-5 mb-5">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<a href="create.html" class="create btn btn-primary">Create</a >
+								</div>
+							</div>
+							<div class="card pt-1 pb-1 pl-1 pr-1 mt-5">
+								<table class="table" id="myTable">
+									<thead class="thead-dark">
+									  <tr>
+										<th scope="col" hidden>#</th>
+										<th scope="col">Contract Type</th>
+										<th scope="col-1">Actions</th>
+									  </tr>
+									</thead>
+									<tbody id="tbody">
+									</tbody>
+								</table>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- fin content -->
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../../../lib/noty/noty.js"></script>
+		<script src="https://kit.fontawesome.com/1f16052b4b.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../../../lib/datatable/datatables.min.js"></script>
+		
+		<script src="../../../js/site.js"></script>
+		<script src="../../../js/contract_types.js"></script>
+		<!-- Menu Toggle Script -->
+		<script>
+			$(document).ready(function () {
+				loadTable();
+			});
+		</script>
+	</body>
+</html>

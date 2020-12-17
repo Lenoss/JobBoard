@@ -1,0 +1,36 @@
+.login-card{
+    color: #8a8a8a;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+    border-radius: .25rem;
+}
+
+.login-title{
+    background: rgb(221,87,92);
+    background: linear-gradient(90deg, rgba(221,87,92,1) 0%, rgba(255,127,79,1) 67%);
+    margin-top: -2.25rem;
+    margin-right: 4%;
+    margin-left: 4%;
+    padding: 1.6rem 1rem;
+    color: #fff;
+    text-align: center;
+    width: 60%;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+
+.login-card input{
+    background-color: white;
+    padding: 10px 10px;
+}
+
+.login-card .register-me{
+    text-decoration: none;
+}
+
+#society-form{
+    border-top: 1px solid #8a8a8a;
+    padding-top: 20px;
+}

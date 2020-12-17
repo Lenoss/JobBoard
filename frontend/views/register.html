@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Login</title>
+		<meta name="description" content="Login - Register Template">
+		<meta name="author" content="Lorenzo Angelino aka MrLolok">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/datatables.min.css">
+		<link rel="stylesheet" href="../css/nav_bar2.css">
+		
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/login.css">
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<ul class="list-unstyled components">
+					<li>
+						<a href="home.html">
+							<i class="fa fa-home fa-lg"></i>
+							<span class="nav-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="profile.html">
+							<i class="fa fa-user-circle fa-lg"></i>
+							<span class="nav-text">Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="login.html">
+							<i class="fa fa-user fa-lg"></i>
+							<span class="nav-text">Login</span>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<i class="fa fa-envelope-o fa-lg"></i>
+							<span class="nav-text">Contact</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="administration/cities/index.html">
+							<i class="fa fa-map-marked-alt"></i>
+							<span class="nav-text">Cities</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="administration/roles/index.html">
+							<i class="fa fa-users-cog"></i>
+							<span class="nav-text">Roles</span>
+						</a>
+					</li>
+					<li class="darkerlishadow">
+						<a href="administration/advertisements/index.html">
+							<i class="fa fa-briefcase"></i>
+							<span class="nav-text">Advertisement</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Content -->
+			<div id="content">
+				<div class="container-fluid h-100">
+					<button class="navbar-toggler float-left" type="button" id="sidebarCollapse">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					
+					<form class="justify-content-center h-100" id="register-log">
+						<div class="row h-100">
+							<div class="col-md-12 col-lg-7 col-sm-12 align-self-center mx-auto mt-4 mb-4">
+								<div class="login-card">
+									<div class="">
+										<div class="login-title mb-3 ">
+											<h3 class="text-center">Créer mon compte</h3>
+										</div>
+										<div class="form-group">
+											<label for="username">Nom d'utilisateur:</label><br>
+											<input type="text" name="username" id="username" class="form-control" placeholder="ex: utilisateur1">
+										</div>
+										<div class="form-group">
+											<label for="email">Adresse email:</label><br>
+											<input type="email" name="email" id="email" class="form-control" placeholder="test@test.com">
+										</div>
+										<div class="form-group row">
+											<div class="col-6">
+												<label for="password">Mot de passe:</label><br>
+												<input type="password" name="password" id="password" class="form-control" placeholder="**********">	
+											</div>
+											<div class="col-6">
+												<label for="password">Vérification du mot de passe:</label><br>
+												<input type="password" name="password" id="confirme_password" class="form-control" placeholder="**********">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="society" class="text-info">
+												<span>je suis une société</span> 
+												<span><input id="society" name="society" type="checkbox"></span>
+											</label>
+										</div>
+									</div>
+									<div id="society-form">
+										<div class="form-group">
+											<label for="title">Nom de la compagnie:</label><br>
+											<input type="text" name="title" id="title" class="form-control" placeholder="ex: Google">
+										</div>
+										<div class="form-group">
+											<label for="phone">Téléphone:</label><br>
+											<input type="text" name="phone" id="phone" class="form-control" placeholder="ex: 0612345678">
+										</div>
+										<div class="form-group">
+											<label for="logo">Logo:</label><br>
+											<input type="file" name="logo" id="logo" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group ">
+										<button class="btn btn-primary" type="submit">Créer</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- fin content -->
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/1f16052b4b.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>		
+		<!-- Menu Toggle Script -->
+		<script src="../js/site.js"></script>
+		<script src="../js/auth.js"></script>
+	</body>
+</html>

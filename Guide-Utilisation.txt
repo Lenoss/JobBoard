@@ -1,0 +1,10 @@
+Guide D'utilisation de noutre projets JobBoard :
+
+
+---> Executer le fichier backend/install_requirements.sh
+-> Attendre la fin de l'installation
+---> Executer le fichier d'environment dans le backend, pour commencer executer la commande "cd backend".
+-> Une fois dans le dossier backend executer la commande "source venv/bin/activate"
+---> Executer le fichier backend/main.py faire la commande "python3 main.py"
+-> Le serveur flask est lancé
+---> Maintenant il vous suffit d'aller dans vos fichier et de double clicker sur "home.html"

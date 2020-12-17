@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<meta name="description" content="Login - Register Template">
+		<meta name="author" content="Lorenzo Angelino aka MrLolok">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/datatables.min.css">
+		<link rel="stylesheet" href="../css/nav_bar2.css">
+		<link rel="stylesheet" href="../css/main.css">
+	</head>
+	<body>
+		
+		<div class="wrapper">
+
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<ul class="list-unstyled components">
+					<li>
+						<a href="home.html">
+							<i class="fa fa-home fa-lg"></i>
+							<span class="nav-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="profile.html">
+							<i class="fa fa-user-circle fa-lg"></i>
+							<span class="nav-text">Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="login.html">
+							<i class="fa fa-user fa-lg"></i>
+							<span class="nav-text">Login</span>
+						</a>
+					</li>
+					<li>
+						<a href="contact.html">
+							<i class="fa fa-envelope-o fa-lg"></i>
+							<span class="nav-text">Contact</span>
+						</a>
+					</li>
+					<li >
+						<a href="administration/cities/index.html">
+							<i class="fa fa-map-marked-alt"></i>
+							<span class="nav-text">Cities</span>
+						</a>
+					</li>
+					<li >
+						<a href="administration/roles/index.html">
+							<i class="fa fa-users-cog"></i>
+							<span class="nav-text">Roles</span>
+						</a>
+					</li>
+					<li>
+						<a href="administration/advertisements/index.html">
+							<i class="fa fa-briefcase"></i>
+							<span class="nav-text">Adverts</span>
+						</a>
+					</li>
+					<li>
+						<a href="index3.html">
+							<i class="fa fa-briefcase"></i>
+							<span class="nav-text">Adverts</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div id="content">
+				<div class="container-fluid">
+					<button class="navbar-toggler hover-color-orange" type="button" id="sidebarCollapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					
+					<div id="home-recherche" class="row bg-recherche pt-5 pb-5 mb-5">
+						<div class="container">
+							<div class="row mt-2 justify-content-center">
+								<div class="col-10 text-center">
+									<form>
+										<div class="form-row">
+											<div class="col-5 text-left">
+												<label for="metier">Quoi</label>
+												<input type="text" id="metier" name="metier" class="form-control" placeholder="Métier, mots-clés">
+											</div>
+											<div class="col-5 text-left">
+												<label for="metier">Où</label>
+												<input type="text" id="lieu" name="lieu" class="form-control" placeholder="Ville">
+											</div>
+											<div class="col-2 align-self-end">
+												<button class="btn bg-orange hover-color-white" type="submit">Rechercher</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>	
+						</div>	
+					</div>
+					<div class="row mt-3">
+						<div class="container">
+							<div class="row" id="show-all-advertisements">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>   
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/1f16052b4b.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>		
+		<!-- Menu Toggle Script -->
+        <script>
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+				});
+                $.ajax( {
+                    url:"http://127.0.0.1:5000/api/advertisements/",
+                    
+                    type:"GET",
+                    crossDomain:true,
+                    dataType:"json",
+                    
+                    success:function(response){
+                        $.each(response,function(data){
+							$('#show-all-advertisements').append('<div class="col-sm-6" id="advertisement-'+response[data]["advertisement_id"]+'">'+
+									'<div class="card">' +
+										'<div class="card-header titre-card">' +
+											'<h2 class="card-header-title">'+response[data]["title"]+'</h2>'+
+										'</div>'+
+										'<div class="card-body">'+
+											'<p class="card-text">'+response[data]["description"]+'</p>'+
+											'<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#advertisement-'+response[data]["advertisement_id"]+'-show-more" aria-expanded="false" aria-controls="advertisement-'+response[data]["advertisement_id"]+'-show-more"> Voir plus</button>'+
+										'</div>'+
+										'<div id="advertisement-'+response[data]["advertisement_id"]+'-show-more" class="collapse multi-collapse">'+
+											'<ul>'+
+												'<li>Salaire : <span>'+response[data]["wages"]+'</span></li>'+
+												'<li>lieu : <span>'+ response[data]["city_name"] + ' | ' +response[data]["country_name"] +'</span></li>'+
+												'<li>Entreprise : <span>'+response[data]["company_name"]+'</span></li>'+
+											'</ul>'+
+										'</div>'+
+									'</div>'+
+								'</div>'
+							);
+						});
+                    },
+                    error:function(response){
+                        console.log("Error");
+                        console.log(response);
+                    }
+                })
+            });
+        </script>
+	</body>
+</html>
